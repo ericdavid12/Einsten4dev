@@ -3,8 +3,6 @@ public class EinsteinDevIntegration {
     @future(callout=true)
     public static void processOpportunities(Id oppId) {
 
-        System.debug('entrado classe');
-
         Opportunity opp = [SELECT Id, Name, Type, LeadSource,Amount,Owner.Name,
                         CloseDate,Account.Name FROM Opportunity WHERE Id=:oppId];
 
